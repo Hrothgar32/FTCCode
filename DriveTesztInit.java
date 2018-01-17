@@ -75,7 +75,7 @@ public class DriveTesztInit extends OpMode
         // step (using the FTC Robot Controller app on the phone).
         leftDrive  = hardwareMap.get(DcMotor.class, "a");
         rightDrive = hardwareMap.get(DcMotor.class, "b");
-        ballArm = hardwareMap.get(Servo.class, "alkar");
+        ballArm = hardwareMap.get(Servo.class, "kar");
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
