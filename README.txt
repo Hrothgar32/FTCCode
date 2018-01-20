@@ -1,1 +1,2 @@
-So, I've written something here
+In this repository you can find various OP modes which were written by RoboCorp team members. We used the provided
+sample classes and tailored them to our liking. Feel free to use/modify them for your own project!
