@@ -50,7 +50,9 @@ This class tests our 0.2 Beta robots manouvering abilities, namely turning. Afte
 turn around its horizontal axes.
 */
 public class FirstTurnB extends OpMode {
-    /* Declare OpMode members. */
+    /* Declare OpMode members. As the robot has four wheels, our class has four DcMotor objects, and a power variable, with which we store the power given to our
+	robot.
+	*/
     private DcMotor topLeftDrive = null;
     private DcMotor bottomLeftDrive = null;
     private DcMotor topRightDrive = null;
@@ -92,7 +94,7 @@ public class FirstTurnB extends OpMode {
      */
     @Override
     public void loop() {
-       if(mainPower != 1){
+       if(mainPower != 1){ // The robot speeds up in 5 1 second phases.
              mainPower += 0.2;
         topLeftDrive.setPower(mainPower);
         topRightDrive.setPower(mainPower);

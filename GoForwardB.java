@@ -40,9 +40,8 @@ import java.util.Date;
  * or add a @Disabled annotation to prevent this OpMode from being added to the Driver Station
  */
  /*
- This software is an intellectual property of the RoboCorp SRL. Any kind of unauthorized use will be 
- met with a lawsuit!
- This class instructs a four-wheeled robot to move forward.
+ This class instructs a four-wheeled robot to move forward. We utilized a sample Teleop as the skeleton of our code and named the variable as a result of 
+ agreed convention.
  */
 @TeleOp
 
@@ -57,7 +56,7 @@ public class GoForwardB extends OpMode {
     private double mainPower; //the variable which sets the speed for the drives
 
     @Override
-    public void init() {
+    public void init() { //Getting the hardwareMap and giving feedback to the driver station.
         telemetry.addData("Status", "Initialized");
         topLeftDrive = hardwareMap.get(DcMotor.class,"topLeftDrive");
         topRightDrive = hardwareMap.get(DcMotor.class,"topRightDrive");
@@ -89,7 +88,7 @@ public class GoForwardB extends OpMode {
      */
     @Override
     public void loop() {
-        if(mainPower != 1){
+        if(mainPower != 1){	// the robot speeds up in five phases, the duration of each phase is 1 second.
              mainPower += 0.2;
         topLeftDrive.setPower(mainPower);
         topRightDrive.setPower(mainPower);
